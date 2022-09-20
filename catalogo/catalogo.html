@@ -2,22 +2,33 @@
 
 <html lang="es">
     <head>
-    <meta charset="utf-8" />
+        <meta charset="utf-8" />
         <meta name="Cartelera" content="Cartelera de películas">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Cartelera</title>
     </head>
     <body>
         <header>
             <h4>En Cartelera</h4>
         </header>
-        <nav>
-            <ul id="mainMenu">
-                <li>Inicio</li>
-                <li>Cartelera</li>
-                <li>Blog</li>
-                <li>Comidas</li>
-            </ul>
+
+        <nav class="topnav">
+            <!-- Centered link 
+            <div class="topnav-centered">
+                <a href="#home" class="active">Home</a>
+            </div> -->
+
+            <!-- Left-aligned links (default) -->
+            <a href="#Inicio">Inicio</a>
+            <a href="#Cartelera">Cartelera</a>
+
+            <!-- Right-aligned links -->
+            <div class="topnav-right">
+                <a href="#comidas">Comidas</a>
+                <a href="#blog">Blog</a>
+            </div>
         </nav>
+
         <aside id="filtros">
             <h4>Filtros</h4>
             <ul id="byGender">
@@ -101,47 +112,54 @@
             </ul>
             <input type="submit" value="Quitar filtros"/>
         </aside>
+        <p></p>
         <section>
-            <article>
-                <img name=barbaro src="img/Bárbaro.png" width=180 height="275"/>
-                <h4>Bárbaro</h4>
-            </article>
-            <article>
-                <img src="img/Emergencia en el Aire.png" width=180 height="275"/>
-                <h4>Emergencia en el Aire</h4>
-            </article>
-            <article>
-                <h4>Boonie Bears Regreso al Planeta Tierra</h4>
-                <img src="img/Boonie Bears Regreso al Planeta Tierra.png" width=180 height="275"/>
-            </article>
-            <article>
-                <h4>DC Liga De SúperMascotas</h4>
-                <img src="img/DC Liga De SúperMascotas.jpg" width=180 height="275"/>
-            </article>
-            <article>
-                <h4>Érase Una Vez un Genio</h4>
-                <img src="img/Érase Una Vez un Genio.png" width=180 height="275"/>
-            </article>
-            <article>
-                <h4>Minions 2 Nace un Villano</h4>
-                <img src="img/Minions 2 Nace un Villano.jpg" width=180 height="275"/>
-            </article>
-            <article>
-                <h4>Pasaje al Paraíso</h4>
-                <img src="img/Pasaje al Paraíso.png" width=180 height="275"/>
-            </article>
-            <article>
-                <h4>Spider-Man Sin Camino A Casa</h4>
-                <img src="img/Spider-Man Sin Camino A Casa.jpg" width=180 height="275"/>
-            </article>
-            <article>
-                <h4>Tren Bala</h4>
-                <img src="img/Tren Bala.jpg" width=180 height="275"/>
-            </article>
-            <article>
-                <h4>Vértigo</h4>
-                <img src="img/Vértigo.png" width=180 height="275"/>
-            </article>
+            <div class="leftpane">
+                <article>
+                    <img name=barbaro src="img/Bárbaro.png" width=180 height="275"/>
+                    <h4>Bárbaro</h4>
+                </article>
+                <article>
+                    <img src="img/Emergencia en el Aire.png" width=180 height="275"/>
+                    <h4>Emergencia en el Aire</h4>
+                </article>
+                <article>
+                    <img src="img/Boonie Bears Regreso al Planeta Tierra.png" width=180 height="275"/>
+                    <h4>Boonie Bears Regreso al Planeta Tierra</h4>
+                </article>
+                <article>
+                    <img src="img/DC Liga De SúperMascotas.jpg" width=180 height="275"/>
+                    <h4>DC Liga De SúperMascotas</h4>
+                </article>
+            </div>
+            <div class="middlepane">
+                <article>
+                    <img src="img/Érase Una Vez un Genio.png" width=180 height="275"/>
+                    <h4>Érase Una Vez un Genio</h4>
+                </article>
+                <article>
+                    <img src="img/Minions 2 Nace un Villano.jpg" width=180 height="275"/>
+                    <h4>Minions 2 Nace un Villano</h4>
+                </article>
+                <article>
+                    <img src="img/Pasaje al Paraíso.png" width=180 height="275"/>
+                    <h4>Pasaje al Paraíso</h4>
+                </article>
+            </div>
+            <div class="rightpane">
+                <article>
+                    <img src="img/Spider-Man Sin Camino A Casa.jpg" width=180 height="275"/>
+                    <h4>Spider-Man Sin Camino A Casa</h4>
+                </article>
+                <article>
+                    <img src="img/Tren Bala.jpg" width=180 height="275"/>
+                    <h4>Tren Bala</h4>
+                </article>
+                <article>
+                    <img src="img/Vértigo.png" width=180 height="275"/>
+                    <h4>Vértigo</h4>
+                </article>
+            </div>
             
             
         </section>
