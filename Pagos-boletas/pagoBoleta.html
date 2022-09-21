@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pago (prueba)</title>
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="description text-center">Bienvenido al portal de pagos</h1>
+      <p id="description" class="text-center">Rellena todos los campos</p>
+    </header>
+    <section id="lugar-hora-cantidad">
+      <div class="time-location">
+        <p>¿Cual sede escoges?</p>
+        <select id="" name="" class="" required>
+          <option disabled selected value>Selecciona alguna de estas sedes</option>
+          <option value="sede a">Sede A</option>
+          <option value="sede b">Sede B</option>
+          <option value="sede c">Sede C</option>
+        </select>
+        <p>¿Cual horario escoges?</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Selecciona alguno de estos horarios</option>
+          <option value="hora a">Hora A</option>
+          <option value="hora b">Hora B</option>
+          <option value="hora c">Hora C</option>
+        </select>
+      </div>
+      <div>
+        <p>Elige los boletos y la cantidad</p>
+        <label id="preferencial" for="number">Preferencial</label>
+        <input type="number" name="preferencial" />
+        <label id="normal" for="number">Normal</label>
+        <input type="number" name="normal" />
+      </div>
+      
+    </section>
+    <section id="informacion-personal">
+      <h2>Informacion personal</h2>
+      <div id="informacion">
+        <label>Nombre</label>
+          <input name="name"   type="text"/>
+        <label>apellido</label>
+          <input name="apellido"  type="text"/>
+        <label>Correo</label>
+          <input name="correo"  type="email"/>
+      </div>
+      <div>
+        <label>Tipo de documento</label>
+          <select id="" name="" class="" required>
+            <option disabled selected value>Selecciona uno</option>
+            <option value="opcion a">opcion A</option>
+            <option value="opcion b">opcion B</option>
+            <option value="opcion c">opcion C</option>
+          </select>
+        <label>Numero de documento</label>
+          <input type="number" value="num-document"/>
+        <label>Numero de telefono</label>
+          <input type="number" value="num-telephone"/> 
+      </div>
+    </section>  
+    <div id="payment-information">
+    
+        <h2>Informacion de pago</h2>
+        <article>
+          <label>Numero de tarjeta</label>
+          <input value="card-number" type="number" class=""/>
+        </article>
+
+        <article>
+        <label>Codigo de seguiridad (CVV)</label>
+        <input value="cvv" type="number" class=""/>
+        </article>
+        <article>
+        <label>Fecha de expiracion</label>
+        <input  type="datetime" class=""/>
+        </article>
+
+        <input  type="checkbox" class=""/>
+        <label>En cumplimiento del Régimen de Protección Datos Personales, 
+          nos autoriza de manera directa, o a través de terceros designados, 
+          para almacenar, consultar, procesar y en general, 
+          para dar tratamiento a la información personal que suministre, y 
+          para ser incluido en sus bases de datos, 
+          recibir información de la Compañía, 
+          de conformidad con las políticas de privacidad y manejo de información. <a href="#" >Para más información, Haga Clic Aquí *</a></label>
+    </div>
+      <div>
+        <button type="submit" id="submit" class="submit-button">
+          Realizar pago
+        </button>
+      </div>
+  </div>
+</html>
