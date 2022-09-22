@@ -3,6 +3,7 @@ body, html {
     height: 100%;
     margin: 0;
     background-color: #000;
+    color: #858585;
   }
   h1,h2,h3,h4,h5,h6,li, label {
     color: #F2E9EA
