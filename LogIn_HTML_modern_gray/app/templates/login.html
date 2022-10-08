@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block titulo%}
+  Inicio de Sesion
+{% endblock %}
+
+{%block contenido %}
+
+        
+            
+        <h1><center>Iniciar Sesión</center></H1>
+    
+        <div id="contenedor">
+            
+            <div id="contenedorcentrado">
+                <div id="login">
+                    <form id="loginform">
+                        <form action="" method="post" novalidate>
+                            {{ form.hidden_tag() }}
+                            {{ form.csrf_token }}
+                            <p>
+                                {{ form.usuario.label }}<br>
+                                {{ form.usuario(size=30)}}<br>
+                            </p>
+                            <p>
+                                {{ form.contraseña.label }}<br>
+                                {{ form.contraseña(size=30) }}<br>
+                            </p>
+                            <p>{{ form.recordar() }} {{ form.recordar.label }}</p>
+                            <p>{{ form.enviar() }}</p>
+                        </form>
+                    </form>
+                        
+                       
+                    
+                </div>
+                <div id="derecho">
+                    <div class="titulo">
+                        Bienvenido
+                    </div>
+                    <hr>
+                    <div class="pie-form">
+                        <a href="#">¿Perdiste tu contraseña?</a>
+                        <a href="../registro">¿No tienes Cuenta? Registrate</a>
+                        <hr>
+                        <a href="#">« Volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+ {% endblock %}
