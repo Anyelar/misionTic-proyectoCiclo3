@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styleForm.css" />
+    <script> function validar_formulario() {
+        console.log("hola")
+        var nombre = document.formRegistro.userName.value;
+        var email = document.formRegistro.userMail.value;
+        var password = document.formRegistro.password.value;
+    
+        if(nombre.length == 0 || nombre.length < 8)
+        {
+            alert("Debe escribir un nombre con minimo 8 carateres.");
+            document.formRegistro.userName.focus();
+            
+            return false;
+        }
+    
+        var formato_email = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+    
+        if(!email.match(formato_email))
+        {
+            alert("Escriba un correo por favor.");
+            return false;
+        }
+    
+        if(password.length == 0 || password.length < 8)
+        {
+            alert("Debe escrir una clave con minimo 8 carateres.");
+            return false;
+        } 
+       
+        
+        return true;
+    };
+    
+    function mostrarClave()
+    {
+       var campoClave = document.getElementById("password");
+       var tipo = campoClave.type;
+    
+       if(tipo == "password")
+       {
+         campoClave.type="text";
+       }
+       else
+       {
+        campoClave.type="password";
+       }
+    
+    
+    
+    };
+    </script>
+</head>
+
+    <div id="contenedor">
+            
+        <div id="contenedorcentrado">
+        <form action="{{url_for('registro')}}"
+              method="post" 
+              name="formRegistro" 
+              id ="formRegistro" 
+              onsubmit="validar_formulario();">
+            
+            <p>
+                <label >Nombre</label>
+                <input type="text" name="userName" id="userName"/>
+            </p>
+
+            <p>
+                <label >Apellido</label>
+                <input type="text" name="userLastName" id="userLastName"/>
+            </p>
+
+            <p>
+                <label >Usuario</label>
+                <input type="text" name="user" id="user"/>
+            </p>
+
+            <p>
+                <label >Sexo Femenino</label>
+                <input type="radio" name="userSexF" id="userSexF" value="F"/>
+                <label >Sexo Masculino</label>
+                <input type="radio" name="userSexM" id="userSexM" value="M"/>
+            </p>
+            <p>
+                <label >Correo</label>
+                <input type="email" name="userMail" id="userMail"/>
+            </p>
+
+            <p>
+                <label >Clave</label>
+                <input type="password" name="password" id="password"/>
+                <img src="../static/images/login_icon.png" alt="mostrar Clave" width="50" height="50" onmouseenter="mostrarClave();" onmouseleave="mostrarClave();">
+            </p>
+
+            <p id="terminosCond">
+                    <input type="checkbox" id="terminos" value="aceptar"/>
+                    <label>Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+            </p>
+            
+            
+
+            <p>
+                <!--<input type="submit" value=" Registrar " />-->
+                <button type="submit" value="Enviar">Enviar</button>
+            </p>
+
+        
+    
+        
+
+            <div class = "error">
+                <ul>
+                    {% for mensaje in errorMessages %}
+                    <li>{{mensaje}}</li> 
+                    {% endfor %}
+                </ul>
+            </div>
+        </form>
+        </div>
+    </div>

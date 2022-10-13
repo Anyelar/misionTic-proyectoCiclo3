@@ -1,0 +1,72 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    color: #858585;
+  }
+  h1,h2,h3,h4,h5,h6,li, label {
+    color: #F2E9EA
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    position: relative;
+    background-color: #888B8D;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 96px;
+    text-decoration: none ;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  /* Right-aligned section inside the top navigation */
+  .topnav-right {
+    float: right;
+  }
+  
+#filtros {
+    width: 25%;
+    height: 100%;
+    float: left;
+    /*background-color: ;*/
+    border-collapse: collapse;
+}
+
+  .leftpane {
+      width: 25%;
+      height: 100%;
+      float: left;
+      /*background-color: ;*/
+      border-collapse: collapse;
+  }
+  
+  .middlepane {
+      width: 25%;
+      height: 100%;
+      float: left;
+      /*background-color: ;*/
+      border-collapse: collapse;
+  }
+  
+  .rightpane {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    float: left;
+    /*background-color: ;*/
+    border-collapse: collapse;
+  }

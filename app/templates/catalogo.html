@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="Cartelera" content="Cartelera de películas">
+        <link rel="stylesheet" type="text/css" href="../static/css/styleCatalogo.css">
+        
+        <title>Cartelera</title>
+    </head>
+    <body>
+        <header>
+            <h3>Stark Cinema</h3>
+        </header>
+
+        <nav class="topnav">
+            
+            <!-- Left-aligned links (default) -->
+            <a onclick="location.href='http://127.0.0.1:5000/'">Inicio</a>
+            <a onclick="location.href='http://127.0.0.1:5000/cartelera'">Cartelera</a>
+
+            <!-- Right-aligned links -->
+            <div class="topnav-right">
+                <a onclick="location.href='http://127.0.0.1:5000/reseñas'">Foro</a>
+                <a onclick="location.href='http://127.0.0.1:5000/pagos'">Carrito de Compras</a>
+            </div>
+        </nav>
+
+        <h4>En Cartelera</h4>
+
+        <aside id="filtros">
+            <h4>Filtros</h4>
+            <ul id="byGender">
+                <header>
+                    <h4>Genero</h4>
+                </header>
+                <p>
+                    <input type="checkbox" id="action" value="action"/>
+                    <label>Accion</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="drama" value="drama"/>
+                    <label>Drama</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="Horror" value="horror"/>
+                    <label>Horror</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="dibujosAnimados" value="dibujosAnimados"/>
+                    <label>Dibujos Animados</label>
+                </p>
+            </ul>
+                
+            <ul id="byAudience">
+                <header>
+                    <h4>Audiencia</h4>
+                </header>
+
+                <p>
+                    <input type="checkbox" id="kids" value="kids"/>
+                    <label>Niños de 0 a 11 años</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="teenagers" value="teenagers"/>
+                    <label>Jovenes de 12 a 17 años</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="adults" value="adults"/>
+                    <label>Mayores de 18</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="all" value="all" checked/>
+                    <label>Todos</label>
+                </p>
+            </ul>
+            
+            <ul id="byLength">
+                <header>
+                    <h4>Duración</h4>
+                </header>
+                <p>
+                    <input type="checkbox" id="sixtyMins" value="sixtyMins"/>
+                    <label>Hasta 60 minutos</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="sixtyNinetyMins" value="sixtyNinetyMins"/>
+                    <label>Entre 60 y 90 minutos </label>
+                </p>
+                <p>
+                    <input type="checkbox" id="moreThanNinety" value="moreThanNinety"/>
+                    <label>Más de 90 munitos</label>
+                </p>
+            </ul>
+            <ul id="rate">
+                <header>
+                    <h4>Calificación</h4>
+                </header>
+                <p>
+                    <input type="checkbox" id="low"/>
+                    <label>1 y 2 estrellas</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="medium"/>
+                    <label>3 estrellas</label>
+                </p>
+                <p>
+                    <input type="checkbox" id="High"/>
+                    <label>4 y 5 estrellas</label>
+                </p>
+            </ul>
+            <input type="submit" value="Quitar filtros"/>
+            
+        </aside>
+        <p></p>
+        <section>
+            <div class="leftpane">
+                <article>
+                    <img name="barbaro" src="../static/images/Bárbaro.png" width="180" height="275"/>
+                    <h4>Bárbaro</h4>
+                </article>
+                <article>
+                    <img src="../static/images/Emergencia en el Aire.png " width="180" height="275"/>
+                    <h4>Emergencia en el Aire</h4>
+                </article>
+                <article>
+                    <img src="../static/images/Boonie Bears Regreso al Planeta Tierra.png " width="180" height="275"/>
+                    <h4>Boonie Bears Regreso al Planeta Tierra</h4>
+                </article>
+                <article>
+                    <img src="../static/images/DC Liga De SúperMascotas.jpg" width="180" height="275"/>
+                    <h4>DC Liga De SúperMascotas</h4>
+                </article>
+            </div>
+            <div class="middlepane">
+                <article>
+                    <img src="../static/images/Érase Una Vez un Genio.png" width="180" height="275"/>
+                    <h4>Érase Una Vez un Genio</h4>
+                </article>
+                <article>
+                    <img src="../static/images/Minions 2 Nace un Villano.jpg " width="180" height="275"/>
+                    <h4>Minions 2 Nace un Villano</h4>
+                </article>
+                <article>
+                    <img src="../static/images/Pasaje al Paraíso.png" width="180" height="275"/>
+                    <h4>Pasaje al Paraíso</h4>
+                </article>
+            </div>
+            <div class="rightpane">
+                <article>
+                    <img src="../static/images/Spider-Man Sin Camino A Casa.jpg" width="180" height="275"/>
+                    <h4>Spider-Man Sin Camino A Casa</h4>
+                </article>
+                <article>
+                    <img src="../static/images/Tren Bala.jpg" width="180" height="275"/>
+                    <h4>Tren Bala</h4>
+                </article>
+                <article>
+                    <img src="../static/images/Vértigo.png" width="180" height="275"/>
+                    <h4>Vértigo</h4>
+                </article>
+            </div>
+            
+            
+        </section>
+    </body>
+</html>
